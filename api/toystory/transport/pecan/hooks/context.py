@@ -27,3 +27,12 @@ class ContextHook(hooks.PecanHook):
         request_context = context.RequestContext(**context_kwargs)
         state.request.context = request_context
         local.store.context = request_context
+
+    def after(self, state):
+        state.response.headers['Access-Control-Allow-Origin'] = '*'
+        state.response.headers['Access-Control-Allow-Methods'] = 'GET, OPTIONS'
+        state.response.headers[
+            'Access-Control-Allow-Headers'] = 'origin, authorization, accept'
+        if not state.response.headers['Content-Length']:
+            state.response.headers[
+                'Content-Length'] = str(len(state.response.body))
