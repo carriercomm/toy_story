@@ -13,28 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import abc
-
-import six
+from toystory.manager import base
 
 
-@six.add_metaclass(abc.ABCMeta)
-class ManagerDriverBase(object):
-    """Add some docstrings."""
-    def __init__(self, conf, storage):
-        self._conf = conf
-        self._storage = storage
+class DefaultBadgesController(base.BadgesController):
 
-    @property
-    def storage(self):
-        return self._storage
-
-    @abc.abstractproperty
-    def leaderboard_controller(self):
-        """Returns the driver's Leaderboard controller."""
-        raise NotImplementedError
-
-    @abc.abstractproperty
-    def badges_controller(self):
-        """Returns the driver's Badge controller."""
-        raise NotImplementedError
+    def get(self):
+        return []

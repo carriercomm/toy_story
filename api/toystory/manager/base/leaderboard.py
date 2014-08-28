@@ -17,24 +17,15 @@ import abc
 
 import six
 
+from toystory.manager.base import controller
+
 
 @six.add_metaclass(abc.ABCMeta)
-class ManagerDriverBase(object):
-    """Add some docstrings."""
-    def __init__(self, conf, storage):
-        self._conf = conf
-        self._storage = storage
+class LeaderboardControllerBase(controller.ManagerControllerBase):
 
-    @property
-    def storage(self):
-        return self._storage
+    def __init__(self, driver):
+        super(LeaderboardControllerBase, self).__init__(driver)
 
-    @abc.abstractproperty
-    def leaderboard_controller(self):
-        """Returns the driver's Leaderboard controller."""
-        raise NotImplementedError
-
-    @abc.abstractproperty
-    def badges_controller(self):
-        """Returns the driver's Badge controller."""
+    @abc.abstractmethod
+    def get(self, sort, period):
         raise NotImplementedError

@@ -21,27 +21,11 @@ from toystory.manager.base import controller
 
 
 @six.add_metaclass(abc.ABCMeta)
-class TodosControllerBase(controller.ManagerControllerBase):
+class BadgesControllerBase(controller.ManagerControllerBase):
 
     def __init__(self, driver):
-        super(TodosControllerBase, self).__init__(driver)
+        super(BadgesControllerBase, self).__init__(driver)
 
     @abc.abstractmethod
-    def list(self, project_id):
-        raise NotImplementedError
-
-    @abc.abstractmethod
-    def get(self, todo_id):
-        raise NotImplementedError
-
-    @abc.abstractmethod
-    def create(self, project_id, service_name, service_json):
-        raise NotImplementedError
-
-    @abc.abstractmethod
-    def update(self, project_id, service_name):
-        raise NotImplementedError
-
-    @abc.abstractmethod
-    def delete(self, project_id, service_name):
+    def get(self):
         raise NotImplementedError
