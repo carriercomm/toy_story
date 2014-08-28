@@ -56,8 +56,11 @@ class PecanTransportDriver(transport.Driver):
         v1_controller = controllers.V1(self)
         root_controller.add_controller('v1.0', v1_controller)
 
-        todos_controller = controllers.Todos(self)
-        v1_controller.add_controller('todos', todos_controller)
+        leaderboard_controller = controllers.Leaderboard(self)
+        badge_controller = controllers.Badges(self)
+
+        v1_controller.add_controller('leaderboard', leaderboard_controller)
+        v1_controller.add_controller('badges', badge_controller)
 
     def listen(self):
         LOG.info(
