@@ -15,8 +15,8 @@
 
 from wsgiref import simple_server
 
-import pecan
 from oslo.config import cfg
+import pecan
 
 from toystory.openstack.common import log
 from toystory import transport
