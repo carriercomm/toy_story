@@ -1,0 +1,8 @@
+oslo.config==1.3.0
+pbr==0.9.0
+six==1.7.3
+stevedore==0.13
+
+# OpenStack common
+babel==1.3
+iso8601==0.1.10
