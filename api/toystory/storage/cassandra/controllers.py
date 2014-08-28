@@ -13,10 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from toystory.storage.base import driver
-from toystory.storage.base import repos
 
+"""Exports Cassandra storage controllers.
 
-Driver = driver.StorageDriverBase
+Field Mappings:
+    In order to reduce the disk / memory space used,
+    fields name will be, most of the time, the first
+    letter of their long name. Fields mapping will be
+    updated and documented in each controller class.
+"""
 
-ReposController = repos.ReposControllerBase
+from poppy.storage.cassandra import repos
+
+ReposController = repos.ReposController

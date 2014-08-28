@@ -21,27 +21,11 @@ from toystory.storage.base import controller
 
 
 @six.add_metaclass(abc.ABCMeta)
-class TodosControllerBase(controller.StorageControllerBase):
+class ReposControllerBase(controller.StorageControllerBase):
 
     def __init__(self, driver):
-        super(TodosControllerBase, self).__init__(driver)
+        super(ReposControllerBase, self).__init__(driver)
 
     @abc.abstractmethod
-    def list(self, project_id):
-        raise NotImplementedError
-
-    @abc.abstractmethod
-    def get(self, project_id, todo_id):
-        raise NotImplementedError
-
-    @abc.abstractmethod
-    def create(self, project_id, title, text):
-        raise NotImplementedError
-
-    @abc.abstractmethod
-    def update(self, project_id, todo_id, title, text):
-        raise NotImplementedError
-
-    @abc.abstractmethod
-    def delete(self, project_id, todo_id):
+    def list(self):
         raise NotImplementedError

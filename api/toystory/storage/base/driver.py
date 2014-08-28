@@ -26,6 +26,6 @@ class StorageDriverBase(object):
         self._conf = conf
 
     @abc.abstractproperty
-    def todos_controller(self):
+    def repos_controller(self):
         """Returns the driver's Todos controller."""
         raise NotImplementedError
