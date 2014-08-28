@@ -1,0 +1,22 @@
+Toy Story - Dashboard
+======================
+
+Getting Started
+---------------
+#. From your home folder, create the ``~/.toystory`` folder and clone this repository::
+
+    $ cd ~
+    $ mkdir /toystory
+    $ git clone https://github.com/rackerlabs/toy_story.git
+
+#. Install the requirements
+    
+    $ pip install -r requirements.txt
+
+#. Run the dashboard locally
+
+    $ python app.py
+
+#. Open your browser to the following location to view the Toy Story dashboard::
+
+    http://0.0.0.0:5000/
