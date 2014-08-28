@@ -30,6 +30,11 @@ class ManagerDriverBase(object):
         return self._storage
 
     @abc.abstractproperty
-    def todos_controller(self):
-        """Returns the driver's Todos controller."""
+    def leaderboard_controller(self):
+        """Returns the driver's Leaderboard controller."""
+        raise NotImplementedError
+
+    @abc.abstractproperty
+    def badges_controller(self):
+        """Returns the driver's Badge controller."""
         raise NotImplementedError

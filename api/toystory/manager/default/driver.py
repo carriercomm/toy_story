@@ -26,5 +26,11 @@ class DefaultManagerDriver(base.Driver):
         super(DefaultManagerDriver, self).__init__(conf, storage)
 
     @decorators.lazy_property(write=False)
-    def todos_controller(self):
-        return controllers.Todos(self)
+    def leaderboard_controller(self):
+        """Returns the driver's Leaderboard controller."""
+        return controllers.Leaderboard(self)
+
+    @decorators.lazy_property(write=False)
+    def badges_controller(self):
+        """Returns the driver's Badge controller."""
+        return controllers.Badges(self)

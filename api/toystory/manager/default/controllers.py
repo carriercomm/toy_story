@@ -13,7 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from toystory.manager.default import todos
+from toystory.manager.default import badges
+from toystory.manager.default import leaderboard
 
 
-Todos = todos.DefaultTodosController
+Leaderboard = leaderboard.DefaultLeaderboardController
+Badges = badges.DefaultBadgesController

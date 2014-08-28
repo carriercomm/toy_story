@@ -13,10 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from toystory.manager.base import badges
 from toystory.manager.base import driver
-from toystory.manager.base import todos
+from toystory.manager.base import leaderboard
 
 
 Driver = driver.ManagerDriverBase
 
-TodosController = todos.TodosControllerBase
+LeaderboardController = leaderboard.LeaderboardControllerBase
+BadgesController = badges.BadgesControllerBase
