@@ -15,12 +15,14 @@
 
 """Pecan Controllers"""
 
+from toystory.transport.pecan.controllers import badges
+from toystory.transport.pecan.controllers import leaderboard
 from toystory.transport.pecan.controllers import root
-from toystory.transport.pecan.controllers import todos
 from toystory.transport.pecan.controllers import v1
 
 
 # Hoist into package namespace
 Root = root.RootController
-Todos = todos.TodosController
+Badges = badges.BadgeController
+Leaderboard = leaderboard.LeaderboardController
 V1 = v1.V1Controller

@@ -20,7 +20,7 @@ import pecan
 from toystory.transport.pecan.controllers import base
 
 
-class TodosController(base.Controller):
+class LeaderboardController(base.Controller):
 
     @pecan.expose('json')
     def get_all(self):
