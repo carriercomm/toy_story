@@ -34,6 +34,13 @@ _DRIVER_OPTIONS = [
 
 _DRIVER_GROUP = 'drivers'
 
+_GITHUB_OPTIONS = [
+    cfg.StrOpt('access_token',default='null'),
+    cfg.StrOpt('stats_url',default='https://github.com'),
+    cfg.ListOpt('repos',default=[])
+]
+
+_GITHUB_GROUP = 'github'
 
 class Bootstrap(object):
     """Defines the CDN bootstrapper.
@@ -45,8 +52,8 @@ class Bootstrap(object):
     def __init__(self, conf):
         self.conf = conf
         self.conf.register_opts(_DRIVER_OPTIONS, group=_DRIVER_GROUP)
+        self.conf.register_opts(_GITHUB_OPTIONS, group=_GITHUB_GROUP)
         self.driver_conf = self.conf[_DRIVER_GROUP]
-
         log.setup('toystory')
 
         LOG.debug("init bootstrap")
