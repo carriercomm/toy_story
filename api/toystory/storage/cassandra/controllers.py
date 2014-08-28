@@ -13,16 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-"""Exports Cassandra storage controllers.
-
-Field Mappings:
-    In order to reduce the disk / memory space used,
-    fields name will be, most of the time, the first
-    letter of their long name. Fields mapping will be
-    updated and documented in each controller class.
-"""
-
 from toystory.storage.cassandra import repos
 
 ReposController = repos.ReposController

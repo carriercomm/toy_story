@@ -16,10 +16,8 @@
 from toystory.storage import base
 
 
-class MemoryTodosController(base.TodosController):
-
-    def __init__(self, driver):
-        super(MemoryTodosController, self).__init__(driver)
+class ReposController(base.ReposController):
 
     def list(self):
+        # get all
         return []

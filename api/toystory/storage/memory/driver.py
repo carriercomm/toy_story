@@ -27,4 +27,4 @@ class MemoryStorageDriver(base.Driver):
 
     @decorators.lazy_property(write=False)
     def repos_controller(self):
-        return controllers.Repos(self)
+        return controllers.ReposController(self)

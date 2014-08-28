@@ -16,20 +16,8 @@
 from toystory.storage import base
 
 
-CQL_GET_ALL = '''
-    SELECT repo_name
-    FROM repos
-'''
-
-
 class ReposController(base.ReposController):
-
-    @property
-    def session(self):
-        return self._driver._database
 
     def list(self):
         # get all
-        result = self.session.execute(CQL_GET_ALL)
-
-        return result
+        return []

@@ -34,15 +34,18 @@ _DRIVER_OPTIONS = [
 
 _DRIVER_GROUP = 'drivers'
 
+
 _GITHUB_OPTIONS = [
-    cfg.StrOpt('access_token',default='null'),
-    cfg.StrOpt('stats_url',default='https://github.com'),
-    cfg.ListOpt('repos',default=[])
+    cfg.StrOpt('access_token', default='null'),
+    cfg.StrOpt('stats_url', default='https://github.com'),
+    cfg.ListOpt('repos', default=[])
 ]
 
 _GITHUB_GROUP = 'github'
 
+
 class Bootstrap(object):
+
     """Defines the CDN bootstrapper.
 
     The bootstrap loads up drivers per a given configuration, and

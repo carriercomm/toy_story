@@ -14,7 +14,6 @@
 # limitations under the License.
 
 """Cassandra storage driver implementation."""
-
 from cassandra import cluster
 from cassandra import query
 
@@ -23,6 +22,7 @@ from toystory.storage import base
 from toystory.storage.cassandra import controllers
 
 from oslo.config import cfg
+
 
 CASSANDRA_OPTIONS = [
     cfg.ListOpt('cluster', help='Cassandra Cluster contact points'),
@@ -63,5 +63,5 @@ class CassandraStorageDriver(base.Driver):
         return controllers.ReposController(self)
 
     @decorators.lazy_property(write=False)
-    def _database(self):
+    def database(self):
         return self.connection
