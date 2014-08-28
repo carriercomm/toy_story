@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from poppy.storage import base
+from toystory.storage import base
 
 
 CQL_GET_ALL = '''
