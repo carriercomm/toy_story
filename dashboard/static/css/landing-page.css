@@ -35,13 +35,6 @@ body, h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
-.intro-message > img.logo{
-	background-color: #fff;
-	width: 200px;
-	padding: 30px;
-	margin: 0;
-}
-
 .intro-divider {
 	width: 400px;
 	border-top: 1px solid #f8f8f8;
@@ -75,16 +68,6 @@ body, h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.provider-logo{
-	width: 200px;
-	margin: 10px;
-}
-.network-name {
-	text-transform: uppercase;
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 2px;
-}
 
 .content-section-a {
 	background-color: #f8f8f8;
@@ -153,11 +136,7 @@ body, h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 0;
 	}	
 }
-#contributor_list img{
-	padding: 5px;
-	margin: 5px;
-	background-color: #fff;
-}
+
 footer {
 	background-color: #f8f8f8;
 	padding: 50px 0;
