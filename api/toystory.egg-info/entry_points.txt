@@ -5,6 +5,7 @@ toystory-server = toystory.cmd.server:run
 default = toystory.manager.default:Driver
 
 [toystory.storage]
+cassandra = toystory.storage.cassandra:Driver
 memory = toystory.storage.memory:Driver
 
 [toystory.transport]

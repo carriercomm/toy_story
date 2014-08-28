@@ -26,5 +26,5 @@ class MemoryStorageDriver(base.Driver):
         super(MemoryStorageDriver, self).__init__(conf)
 
     @decorators.lazy_property(write=False)
-    def todos_controller(self):
-        return controllers.Todos(self)
+    def repos_controller(self):
+        return controllers.Repos(self)

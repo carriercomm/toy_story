@@ -18,18 +18,15 @@
 from cassandra import cluster
 from cassandra import query
 
-from poppy.common import decorators
-from poppy.openstack.common import log as logging
-from poppy.storage import base
-from poppy.storage.cassandra import controllers
+from toystory.common import decorators
+from toystory.storage import base
+from toystory.storage.cassandra import controllers
 
 from oslo.config import cfg
 
-LOG = logging.getLogger(__name__)
-
 CASSANDRA_OPTIONS = [
     cfg.ListOpt('cluster', help='Cassandra Cluster contact points'),
-    cfg.StrOpt('keyspace', default='poppy',
+    cfg.StrOpt('keyspace', default='toystory',
                help='Keyspace for all queries made in session'),
 ]
 

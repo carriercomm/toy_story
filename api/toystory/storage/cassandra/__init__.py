@@ -1,6 +1,6 @@
-"""MongoDB Storage Driver for CDN"""
+"""Storage Driver"""
 
-from poppy.storage.cassandra import driver
+from toystory.storage.cassandra import driver
 
 # Hoist classes into package namespace
 Driver = driver.CassandraStorageDriver

@@ -23,6 +23,6 @@ Field Mappings:
     updated and documented in each controller class.
 """
 
-from poppy.storage.cassandra import repos
+from toystory.storage.cassandra import repos
 
 ReposController = repos.ReposController
