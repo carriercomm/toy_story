@@ -38,3 +38,4 @@ tests/cover
 .pydevproject
 venv
 docker_rsa*
+.idea
