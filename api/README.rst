@@ -11,17 +11,19 @@ Getting Started
 #. From your home folder, create the ``~/.toystory`` folder and clone this repository::
 
     $ cd ~
-    $ mkdir .toystory
-    $ git clone https://github.com/rackerlabs/finding_toystory.git
+    $ mkdir /toystory
+    $ git clone https://github.com/rackerlabs/toy_story.git
 
 #. Copy the configuration files to the directory ``~/.toystory``::
 
-    $ cp finding_toystory/etc/toystory.conf ~/.toystory/toystory.conf
-    $ cp finding_toystory/etc/logging.conf ~/.toystory/logging.conf
+    $ cp toy_story/etc/toystory.conf ~/.toystory/toystory.conf
+    $ cp toy_story/etc/logging.conf ~/.toystory/logging.conf
 
 #. For logging, find the ``[DEFAULT]`` section in ``~/.toystory/toystory.conf`` and modify as desired::
 
     log_file = server.log
+
+#. From your /toy_story/api folder::
 
 #. Install general requirements::
 
@@ -35,9 +37,9 @@ Getting Started
 
     $ toystory-server
 
-#. Test everything is working by requesting the root URL with a sample project ID::
+#. Test everything is working by requesting the root URL::
 
-    $ curl -i -H "X-Project-Id: 123" http://0.0.0.0:8888/
+    $ curl -i -H http://0.0.0.0:8888/
 
    You should get an **HTTP 200** along with some headers that will look similar to this::
 

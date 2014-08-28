@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Poppy CDN</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Custom Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,600" rel="stylesheet" type="text/css">
+
+    <!-- Add custom CSS here -->
+    <link href="static/css/landing-page.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://github.com/stackforge/poppy">Mirrored on GitHub</a>
+                <a class="navbar-brand" href="http://git.openstack.org/cgit/stackforge/poppy">Code on StackForge</a>
+                
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a>
+                    </li>
+                    <li><a href="#contributors">Contributors</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="intro-header">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <img src="static/img/poppy.png" class="img-circle logo" />
+                        <h1>pop.py</h1>
+                        <h3>Accelerate your app using the points of presence from the best CDN providers</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li><a href="https://wiki.openstack.org/wiki/Poppy" class="btn btn-default btn-lg"><span class="network-name">Poppy Wiki</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <div id="about" class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Breaking Vendor Lock In</h2>
+                    <h2></h2>
+                    <p class="lead">No more vendor lock in! Use our generic open-source API to configure 
+                        your app, using a variety of CDN providers. 
+                        <br/><br/>
+                        Switch vendors with a simple configuration change.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="provider-logo" src="static/img/fastly.png" alt="fastly.com">
+                    <img class="provider-logo" src="static/img/maxcdn.png" alt="maxcdn.com">
+                    <img class="provider-logo" src="static/img/awscloudfront.png" alt="aws cloudfront">
+                   <!-- <img class="provider-logo" src="static/img/akamai.gif" alt="akamai.com">-->
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Introducing the pop.py REST API</h2>
+                    <p class="lead">Our API is <a href="https://github.com/stackforge/poppy">open- sourced</a> and built with Python.  We are also built to play nice with <a href="https://www.openstack.org/">OpenStack</a> clouds, supporting <a href="https://wiki.openstack.org/wiki/Keystone">KeyStone Authentication</a>.</p>
+                    <p>For more details, see the full <a href="http://docs.cloudcdn.apiary.io">Poppy REST API Documentation</a>.
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="static/img/api.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Getting Started</h2>
+                    <p class="lead">
+                        Pop.py aims to integrate the plethora of CDN providers with an open source Python-based API.
+                        <br/><br/>
+                        We are excited to bring to you this technology which unburdens you from developing against differing CDN provider API's.  We do the translation for you. Configure your application using our API.
+                        <br/><br/>
+                        Visit the <a href="https://poppy.readthedocs.org">Developer docs</a> for more information about setting up pop.py.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">CDN Providers are plug and play</h2>
+                    <p class="lead">
+                        As an operator, you can configure the providers you offer your customers.
+                        <br/><br/>
+                        As a provider, you can easily build your own provider extension to fit into our ecosystem. Just send us a <a href="https://github.com/stackforge/poppy">Patch</a> using <a href="https://poppy.readthedocs.org/en/latest/gettingstarted_gerrit.html">Gerrit</a>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading">Natively designed for OpenStack:</h2><br/><br/>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">
+                        Platform Flexibility
+                        <ul>
+                            <li><strong>Flexible</strong> Transport Drivers (Pecan)</li>
+                            <li>Choose your own Storage Driver (Cassandra, MySQL)</li>
+                            <li>CDN <strong>Vendor extensions</strong> for provider integration</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">
+                        Application Portability
+                        <ul>
+                            <li><strong>App portability</strong> across OpenStack Clouds from different vendors</li>
+                            <li><strong>Docker powered</strong> portability of runtime container stacks to Docker-compatible clouds</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Want to contribute?</h2>
+                    <p>We have ambitious goals and we need your help.</p>
+                    <p>
+                        This effort can only be successful with the involvement of developers, IT organizations, service providers, and CDN vendors.
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                        <a href="http://git.openstack.org/cgit/stackforge/poppy" target="_blank">
+                            <img alt="Code Repo" src="/static/img/logo_openstack.png">
+                        </a>
+                        <h4 class="center">StackForge/Poppy</h4>
+                </div>
+                <div class="col-lg-6 text-center">
+                        <a href="https://webchat.freenode.net/?channels=openstack-poppy" target="_blank">
+                            <img alt="IRC" src="/static/img/logo_irc.png">
+                        </a>
+                        <h4 class="center">#openstack-poppy on freenode</h4>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    
+    <!-- /. contributors -->
+    <div id="contributors" class="banner">
+        <div class="container">
+            <div class="row">
+                <div id="contributor_list" class="col-lg-12 text-center">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+     <div id="resources" class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Additional Resources</h2>
+
+                    <dl class="dl-horizontal">
+                        <dt>OpenStack wiki</dt>
+                        <dd>
+                            <a href="https://wiki.openstack.org/wiki/Poppy">wiki.openstack.org/wiki/Poppy</a>
+                        </dd>
+                        
+                        <dt>Source code</dt>
+                        <dd>
+                            <a href="http://git.openstack.org/cgit/stackforge/poppy">stackforge/Poppy</a>
+                        </dd>
+
+                        <dt>Blueprints</dt>
+                        <dd>
+                            <a href="https://blueprints.launchpad.net/Poppy">blueprints.launchpad.net/Poppy</a>
+                        </dd>
+                        
+                        <dt>FAQ</dt>
+                        <dd>
+                            <a href="https://wiki.openstack.org/wiki/Poppy/FAQ">wiki.openstack.org/wiki/Poppy/FAQ</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright text-muted small">Copyright &copy; Rackspace 2014. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+    <script>
+        function get_collaborators(){
+            repo = "https://api.github.com/repos/stackforge/poppy/contributors"
+
+            $.getJSON(repo, function(data){
+                console.log(data);
+                $.each(data, function(i, item){
+                    avatar = $( "<img class='img-circle' width='100px'>" );
+                    avatar.attr( "src", item.avatar_url );
+
+                    tooltip = item.login + " - " + item.contributions + " contributions."
+                    link = $("<a data-toggle='tooltip' data-original-title='" + tooltip + "'>");
+                    link.attr("href", item.html_url);
+                    link.tooltip({placement: 'bottom'});
+
+                    avatar.appendTo(link);
+                    link.appendTo( "#contributor_list" );
+                });
+            });
+        }
+
+        get_collaborators();
+
+    </script>
+</body>
+
+</html>

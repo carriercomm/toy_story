@@ -24,17 +24,6 @@ class ContextHook(hooks.PecanHook):
     def on_route(self, state):
         context_kwargs = {}
 
-        if 'X-Project-ID' in state.request.headers:
-            context_kwargs['tenant'] = state.request.headers['X-Project-ID']
-
-        if 'tenant' not in context_kwargs:
-            # Didn't find the X-Project-Id header, pull from URL instead
-            # Expects form /v1/{project_id}/path
-            context_kwargs['tenant'] = state.request.path.split('/')[2]
-
-        if 'X-Auth-Token' in state.request.headers:
-            context_kwargs['auth_token'] = state.request.headers['X-Auth-Token']
-
         request_context = context.RequestContext(**context_kwargs)
         state.request.context = request_context
         local.store.context = request_context

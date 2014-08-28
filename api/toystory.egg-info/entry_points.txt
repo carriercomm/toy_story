@@ -1,0 +1,12 @@
+[toystory.transport]
+pecan = toystory.transport.pecan:Driver
+
+[toystory.manager]
+default = toystory.manager.default:Driver
+
+[console_scripts]
+toystory-server = toystory.cmd.server:run
+
+[toystory.storage]
+memory = toystory.storage.memory:Driver
+
