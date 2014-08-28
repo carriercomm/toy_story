@@ -20,7 +20,7 @@ import six
 
 @six.add_metaclass(abc.ABCMeta)
 class StorageDriverBase(object):
-    """Add some docstrings"""
+    """Add some docstrings."""
 
     def __init__(self, conf):
         self._conf = conf

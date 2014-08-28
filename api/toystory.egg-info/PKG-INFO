@@ -1,18 +1,13 @@
 Metadata-Version: 1.1
 Name: toystory
-Version: aeba095
+Version: 570187f
 Summary: Toy Story - Gamify Github
 Home-page: UNKNOWN
 Author: Rackspace Atlanta
 Author-email: UNKNOWN
 License: UNKNOWN
-Description: Finding Dory
+Description: Toy Story
         ============
-        A reference project for Python APIs based on OpenStack. In particular, this project uses:
-        
-        * oslo.config
-        * pecan
-        * stevedore
         
         Getting Started
         ---------------
@@ -20,8 +15,6 @@ Description: Finding Dory
         
             $ cd ~
             $ mkdir /toystory
-        
-        
             $ git clone https://github.com/rackerlabs/toy_story.git
         
         #. Copy the configuration files to the directory ``~/.toystory``::
@@ -32,6 +25,8 @@ Description: Finding Dory
         #. For logging, find the ``[DEFAULT]`` section in ``~/.toystory/toystory.conf`` and modify as desired::
         
             log_file = server.log
+        
+        #. From your /toy_story/api folder::
         
         #. Install general requirements::
         
@@ -45,9 +40,9 @@ Description: Finding Dory
         
             $ toystory-server
         
-        #. Test everything is working by requesting the root URL with a sample project ID::
+        #. Test everything is working by requesting the root URL::
         
-            $ curl -i -H "X-Project-Id: 123" http://0.0.0.0:8888/
+            $ curl -i -H http://0.0.0.0:8888/
         
            You should get an **HTTP 200** along with some headers that will look similar to this::
         

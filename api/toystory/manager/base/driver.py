@@ -20,8 +20,7 @@ import six
 
 @six.add_metaclass(abc.ABCMeta)
 class ManagerDriverBase(object):
-    """Add some docstrings"""
-
+    """Add some docstrings."""
     def __init__(self, conf, storage):
         self._conf = conf
         self._storage = storage

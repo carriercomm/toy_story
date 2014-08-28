@@ -13,10 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from toystory.common import decorators
-from toystory.openstack.common import log
 from oslo.config import cfg
 from stevedore import driver
+
+from toystory.common import decorators
+from toystory.openstack.common import log
 
 
 LOG = log.getLogger(__name__)
