@@ -1,10 +1,5 @@
-Finding Dory
+Toy Story
 ============
-A reference project for Python APIs based on OpenStack. In particular, this project uses:
-
-* oslo.config
-* pecan
-* stevedore
 
 Getting Started
 ---------------
