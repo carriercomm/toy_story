@@ -136,7 +136,7 @@
 
         function get_leaderboard(weeks){
             leaders = null;
-            url = "http://localhost:8888/v1.0/{{repo.org}}/{{repo.repo}}/leaderboard?sort=commit&weeks=" + weeks
+            url = "http://localhost:8888/v1.0/{{repo.org}}/{{repo.repo}}/leaderboard?sort=commits&weeks=" + weeks
 
             $.getJSON(url, function(data){
                 ko.applyBindings({ leaders: data })

@@ -1,4 +1,4 @@
-# Copyright (c) 2014 Rackspace, Inc.
+# Copyright (c) 2013 Rackspace, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,16 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from oslo.config import cfg
-conf = cfg.CONF
-
-from toystory.manager import base
-from toystory.utils import async
+import json
 
 
-class DefaultBadgesController(base.BadgesController):
+class ItemResource(object):
 
-    def get(self, git_org, git_repo, username):
-        responses = []
+    def __init__(self, badges_controller):
+        self.badges_controller = badges_controller
 
-        return responses
+    def on_get(self, req, resp, org, repo, username):
+
+        badges = self.badges_controller.get(org, repo, username)
+        result = json.dumps(badges)
+
+        resp.body = (result)

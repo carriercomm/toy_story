@@ -23,6 +23,7 @@ import six
 from toystory import transport
 from toystory.openstack.common import log
 from toystory.transport.falcon import leaderboard
+from toystory.transport.falcon import badges
 
 
 _WSGI_OPTIONS = [
@@ -58,14 +59,20 @@ class DriverBase(transport.DriverBase):
     def after_hooks(self, req, resp):
         resp.set_header('Access-Control-Allow-Origin', '*')
         resp.set_header('Access-Control-Allow-Methods', 'GET, OPTIONS')
-        resp.set_header('Access-Control-Allow-Headers', 'origin, authorization, accept')
+        resp.set_header(
+            'Access-Control-Allow-Headers', 'origin, authorization, accept')
 
     def _init_routes(self):
         """Initialize hooks and URI routes to resources."""
         self.app = falcon.API(after=[self.after_hooks])
 
         self.app.add_route(
-            '/v1.0/{org}/{repo}/leaderboard', leaderboard.ItemResource(self._manager.leaderboard_controller))
+            '/v1.0/{org}/{repo}/leaderboard',
+            leaderboard.ItemResource(self._manager.leaderboard_controller))
+
+        self.app.add_route(
+            '/v1.0/{org}/{repo}/{username}/badges',
+            badges.ItemResource(self._manager.badges_controller))
 
     def listen(self):
         """Self-host using 'bind' and 'port' from the WSGI config group."""

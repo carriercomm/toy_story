@@ -112,15 +112,15 @@
 
     <script>
 
-        function get_leaderboard(){
-            url = "http://localhost:8888/v1.0/leaderboard"
+        function get_badges(){
+            url = "http://localhost:8888/v1.0/{{user.org}}/{{user.repo}}/{{user.username}}/badges"
 
             $.getJSON(url, function(data){
-                ko.applyBindings({ leaders: data['deuce'] })
+                ko.applyBindings({ leaders: data })
             });
         }
 
-        get_leaderboard();
+        get_badges();
 
     </script>
 </body>
