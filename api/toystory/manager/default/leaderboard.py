@@ -27,7 +27,7 @@ class DefaultLeaderboardController(base.LeaderboardController):
         # changeup according to function signature soon.
         access_token = conf.github.access_token
         urls = [conf.github.stats_url.format(repo) + '?access_token={0}'.format(conf.github.access_token) for repo in conf.github.repos]
-        responses = async.async_request('GET',urls)
+        responses = async.async_request(sort, period, 'GET',urls)
         return {repo: response for (repo, response) in zip(conf.github.repos,responses)}
 
 
