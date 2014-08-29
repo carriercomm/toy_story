@@ -17,7 +17,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <!-- Add custom CSS here -->
-    <link href="static/css/landing-page.css" rel="stylesheet">
+    <link href="/static/css/landing-page.css" rel="stylesheet">
 
 </head>
 
@@ -86,7 +86,7 @@
                                     <div class="avatar col-md-1">
                                         <img class="img-thumbnail" data-bind="attr:{src: gravatar}"></img>
                                     </div>
-                                    <div class="name col-md-6" data-bind="text: user"></div>
+                                    <a data-bind="attr:{href: '/user/' + user}"><div class="name col-md-6" data-bind="text: user"></div></a>
                                     <div class="score col-md-4" data-bind="text: commits + ' Commits'"></div>
                                 </div>
                             </div>
