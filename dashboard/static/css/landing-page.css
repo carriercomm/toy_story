@@ -147,7 +147,23 @@ footer {
 p.copyright {
 	margin: 15px 0 0;
 }
+.badge_row {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+  
+}
+.badge_row .item {
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%; 
+}
 
+.badge_row .well {
+ position:relative;
+ display: block;
+}
 .leader .name, .leader .rank{
 	font-family: 'Oswald', sans-serif;
 	font-size: 2em;

@@ -21,7 +21,7 @@ from toystory.transport.pecan.controllers import base
 class LeaderboardController(base.Controller):
 
     @pecan.expose('json')
-    def get(self):
+    def get(self, org, repo, weeks):
         leaderboard_controller = self._driver.manager.leaderboard_controller
 
-        return leaderboard_controller.get('commit', -7)
+        return leaderboard_controller.get('commit', org, repo, weeks)
