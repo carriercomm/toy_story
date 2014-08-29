@@ -22,14 +22,13 @@ from toystory.utils import async
 
 class DefaultLeaderboardController(base.LeaderboardController):
 
-    def get(self, sort, period):
+    def get(self, sort, git_org, git_repo, weeks):
         # TODO(TheSriram): works based on commits and period is entire history
         # changeup according to function signature soon.
-        access_token = conf.github.access_token
-        urls = [conf.github.stats_url.format(repo) + '?access_token={0}'.format(conf.github.access_token) for repo in conf.github.repos]
-        responses = async.async_request(sort, period, 'GET',urls)
-        return {repo: response for (repo, response) in zip(conf.github.repos,responses)}
+        stats = "https://api.github.com/repos/{0}/{1}/stats/contributors".format(
+            git_org, git_repo)
+        url = stats + '?access_token={0}'.format(conf.github.access_token)
 
+        responses = async.async_request(sort, weeks, 'GET', [url])
 
-
-
+        return responses

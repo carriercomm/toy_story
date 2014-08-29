@@ -73,7 +73,7 @@
                     <div class="list-group">
                       <a href="#" class="list-group-item active">
                         <h4 class="list-group-item-heading">
-                            <span class="title">August Leaderboard - Deuce</span>
+                            <span class="title">2 Weeks - Leaderboard - Deuce</span>
                         </h4>
                       </a>
                     </div>
@@ -115,10 +115,10 @@
     <script>
 
         function get_leaderboard(){
-            url = "http://localhost:8888/v1.0/leaderboard"
+            url = "http://localhost:8888/v1.0/rackerlabs/deuce/leaderboard?sort=commit&weeks=-2"
 
             $.getJSON(url, function(data){
-                ko.applyBindings({ leaders: data['deuce'] })
+                ko.applyBindings({ leaders: data })
             });
         }
 

@@ -1,4 +1,4 @@
-# Copyright (c) 2014 Rackspace, Inc.
+# Copyright (c) 2013 Rackspace, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,10 +13,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Dory Transport Drivers"""
-
-from toystory.transport import base
+import json
 
 
-# Hoist into package namespace
-DriverBase = base.TransportDriverBase
+class ItemResource(object):
+
+    def __init__(self, leaderboard_controller):
+        self.leaderboard_controller = leaderboard_controller
+
+    def on_get(self, req, resp, org, repo):
+        sort = req.get_param('sort')
+        weeks = req.get_param_as_int('weeks')
+
+        board = self.leaderboard_controller.get(sort, org, repo, weeks)
+        result = json.dumps(board[0])
+
+        resp.body = (result)

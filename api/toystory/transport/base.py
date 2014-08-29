@@ -33,10 +33,6 @@ class TransportDriverBase(object):
         self._app = None
 
     @property
-    def app(self):
-        return self._app
-
-    @property
     def manager(self):
         return self._manager
 
