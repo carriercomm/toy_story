@@ -147,23 +147,24 @@ footer {
 p.copyright {
 	margin: 15px 0 0;
 }
+
 .badge_row {
- -moz-column-width: 18em;
- -webkit-column-width: 18em;
- -moz-column-gap: 1em;
- -webkit-column-gap:1em; 
-  
+	 -moz-column-width: 18em;
+	 -webkit-column-width: 18em;
+	 -moz-column-gap: 1em;
+	 -webkit-column-gap:1em; 
 }
 .badge_row .item {
- display: inline-block;
- padding:  .25rem;
- width:  100%; 
+	 display: inline-block;
+	 padding:  .25rem;
+	 width:  100%; 
 }
 
 .badge_row .well {
- position:relative;
- display: block;
+	 position:relative;
+	 display: block;
 }
+
 .leader .name, .leader .rank{
 	font-family: 'Oswald', sans-serif;
 	font-size: 2em;
@@ -177,4 +178,18 @@ p.copyright {
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #ababab;
+}
+
+.list-group-item-heading,
+.list-group-item-heading a{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	padding-right: 10px;
+}
+
+.list-group-item-heading a:hover,
+.list-group-item-heading a.active{
+	color:  #ababab;
+	text-decoration: none;
 }

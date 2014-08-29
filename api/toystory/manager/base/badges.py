@@ -27,5 +27,5 @@ class BadgesControllerBase(controller.ManagerControllerBase):
         super(BadgesControllerBase, self).__init__(driver)
 
     @abc.abstractmethod
-    def get(self):
+    def get(self, org, repo, username):
         raise NotImplementedError
