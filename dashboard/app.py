@@ -14,9 +14,16 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/user/<username>")
-def user_profile(username):
-    return render_template('user.html')
+@app.route("/leaderboard/<org>/<repo>")
+def leaderboard(org, repo):
+    repo = {'org': org, 'repo': repo}
+    return render_template('leaderboard.html', repo=repo)
+
+
+@app.route("/user/<org>/<repo>/<username>")
+def user_profile(org, repo, username):
+    user = {'org': org, 'repo': repo, 'username': username}
+    return render_template('user.html', user=user)
 
 # launch
 if __name__ == "__main__":
