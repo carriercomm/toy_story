@@ -86,6 +86,7 @@
                                 <a href="?weeks=-2" id="week-2" class="weeks" onclick="get_leaderboard(-2);">2 Weeks</a>
                                 <a href="?weeks=-4" id="week-4" class="weeks" onclick="get_leaderboard(-4);">4 Weeks</a>
                                 <a href="?weeks=-999" id="week-999" class="weeks" onclick="get_leaderboard(-999);">All Time</a>
+                                <a href="?sort=comments" id="week-999" class="weeks" onclick="get_leaderboard(-999);">Comments</a>
                             </div>
                         </div>
                       </div>
@@ -100,7 +101,7 @@
                                         <img class="img-thumbnail" data-bind="attr:{src: gravatar}"></img>
                                     </div>
                                     <a data-bind="attr:{href: '/user/{{repo.org}}/{{repo.repo}}/' + user}"><div class="name col-md-6" data-bind="text: user"></div></a>
-                                    <div class="score col-md-4" data-bind="text: commits + ' Commits'"></div>
+                                    <div class="score col-md-4" data-bind="text: score"></div>
                                 </div>
                             </div>
                         </div>
@@ -134,9 +135,9 @@
             return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
 
-        function get_leaderboard(weeks){
+        function get_leaderboard(weeks, sort){
             leaders = null;
-            url = "http://localhost:8888/v1.0/{{repo.org}}/{{repo.repo}}/leaderboard?sort=commits&weeks=" + weeks
+            url = "http://localhost:8888/v1.0/{{repo.org}}/{{repo.repo}}/leaderboard?sort=" + sort + "&weeks=" + weeks
 
             $.getJSON(url, function(data){
                 ko.applyBindings({ leaders: data })
@@ -149,7 +150,10 @@
         defaultweeks = getParameterByName("weeks");
         if (defaultweeks === "") defaultweeks = -4;
 
-        get_leaderboard(defaultweeks);
+        defaultsort = getParameterByName("sort");
+        if (defaultsort === "") defaultsort = "commits";
+
+        get_leaderboard(defaultweeks, defaultsort);
 
 
     </script>

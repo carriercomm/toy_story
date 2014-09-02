@@ -27,5 +27,5 @@ class LeaderboardControllerBase(controller.ManagerControllerBase):
         super(LeaderboardControllerBase, self).__init__(driver)
 
     @abc.abstractmethod
-    def get(self, sort, org, repo, weeks):
+    def get_commits(self, org, repo, weeks):
         raise NotImplementedError
