@@ -25,7 +25,12 @@ class ItemResource(object):
         sort = req.get_param('sort')
         weeks = req.get_param_as_int('weeks')
 
-        board = self.leaderboard_controller.get(sort, org, repo, weeks)
-        result = json.dumps(board[0])
+        if (sort == "commits"):
+            board = self.leaderboard_controller.get_commits(org, repo, weeks)
+            result = json.dumps(board)
+            resp.body = (result)
 
-        resp.body = (result)
+        elif (sort == "comments"):
+            board = self.leaderboard_controller.get_comments(org, repo, weeks)
+            result = json.dumps(board)
+            resp.body = (result)

@@ -156,13 +156,15 @@ p.copyright {
 }
 .badge_row .item {
 	 display: inline-block;
-	 padding:  .25rem;
-	 width:  100%; 
 }
 
 .badge_row .well {
 	 position:relative;
 	 display: block;
+}
+
+.badge_row .well img{
+	width: 100px;
 }
 
 .leader .name, .leader .rank{
