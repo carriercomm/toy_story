@@ -1,7 +1,7 @@
 Toy Story - Dashboard
 ======================
 
-![Toystory](https://cloud.githubusercontent.com/assets/1391763/12685838/8544869a-c694-11e5-85b1-5f7b30ef06e9.png)
+![toystory](https://cloud.githubusercontent.com/assets/1391763/12685838/8544869a-c694-11e5-85b1-5f7b30ef06e9.png)
 
 
 Getting Started
