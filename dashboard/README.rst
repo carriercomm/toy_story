@@ -3,10 +3,8 @@ Toy Story - Dashboard
 
 Getting Started
 ---------------
-#. From your home folder, create the ``~/.toystory`` folder and clone this repository::
+#. Clone this repository::
 
-    $ cd ~
-    $ mkdir /toystory
     $ git clone https://github.com/rackerlabs/toy_story.git
 
 #. Install the requirements

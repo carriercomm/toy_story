@@ -1,4 +1,3 @@
-# Copyright (c) 2013 Rackspace, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,23 +13,33 @@
 # limitations under the License.
 
 import json
+import requests
+import os
 
 
-class ItemResource(object):
-
-    def __init__(self, leaderboard_controller):
-        self.leaderboard_controller = leaderboard_controller
+class LeaderboardItem(object):
 
     def on_get(self, req, resp, org, repo):
         sort = req.get_param('sort')
         weeks = req.get_param_as_int('weeks')
+        github_token = os.environ['GITHUB_TOKEN']
+        git_url = "https://api.github.com"
 
         if (sort == "commits"):
-            board = self.leaderboard_controller.get_commits(org, repo, weeks)
+            url = "{0}/repos/{1}/{2}/stats/contributors?access_token={3}".format(
+                git_url, org, repo, github_token)
+            commit_stats = requests.get(url).json()
+
+            commits = [dict(user=response['author']['login'],
+                            score=sum(commits['c']
+                                      for commits in response['weeks'][weeks:]),
+                            gravatar=response['author']['avatar_url'])
+                       for response in commit_stats]
+
+            board = sorted(
+                commits, key=lambda k: k['score'], reverse=True)
+
             result = json.dumps(board)
             resp.body = (result)
 
-        elif (sort == "comments"):
-            board = self.leaderboard_controller.get_comments(org, repo, weeks)
-            result = json.dumps(board)
-            resp.body = (result)
+

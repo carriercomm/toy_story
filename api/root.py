@@ -1,4 +1,3 @@
-# Copyright (c) 2014 Rackspace, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Cassandra Storage Driver"""
-
-from toystory.storage.cassandra import driver
+import json
 
 
-# Hoist classes into package namespace
-Driver = driver.CassandraStorageDriver
+class RootItem(object):
+
+    def on_get(self, req, resp):
+        resp.body = json.dumps({"status": "up"})
