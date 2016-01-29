@@ -1,4 +1,4 @@
-![toystory](/ToyStory.jpg)
+[![toy story](/ToyStory.png)]
 
 
 Toy Story - Dashboard
