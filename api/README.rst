@@ -4,11 +4,16 @@ Toy Story
 Getting Started
 ---------------
 
+
 #. From your /toy_story/api folder::
 
 #. Install general requirements::
 
     $ pip install -r requirements/requirements.txt
+
+#. Export your Github Token (you can get your secret token from Github)
+
+    $ export GITHUB_TOKEN=abcdef123
 
 #. Start the web server::
 

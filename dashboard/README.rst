@@ -1,8 +1,14 @@
+![toy story](/ToyStory.png)
+
+
 Toy Story - Dashboard
 ======================
 
+
+
 Getting Started
 ---------------
+
 #. Clone this repository::
 
     $ git clone https://github.com/rackerlabs/toy_story.git
