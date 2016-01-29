@@ -1,7 +1,7 @@
 Toy Story - Dashboard
 ======================
 
-![toystory](ToyStory.png?raw=true "Toy Story")
+![toystory](/ToyStory.png?raw=true "Toy Story")
 
 
 Getting Started
